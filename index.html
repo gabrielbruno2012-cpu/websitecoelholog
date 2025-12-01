@@ -1,142 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CoelhoLog - Login</title>
-
-<style>
-    body {
-        margin: 0;
-        background: #062345;
-        font-family: Arial, sans-serif;
-    }
-
-    .login-container {
-        max-width: 420px;
-        margin: 70px auto;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .logo-box img {
-        width: 260px;
-        margin-bottom: 30px;
-        user-select: none;
-    }
-
-    .login-card {
-        background: #ffffff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
-        text-align: left;
-    }
-
-    .login-card h2 {
-        text-align: center;
-        color: #062345;
-        margin-bottom: 25px;
-        font-size: 26px;
-        font-weight: bold;
-    }
-
-    .input {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #cccccc;
-        border-radius: 8px;
-        margin-top: 10px;
-        font-size: 15px;
-    }
-
-    .btn-login {
-        width: 100%;
-        background: #f3c400;
-        padding: 13px;
-        border: none;
-        border-radius: 8px;
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .btn-login:hover {
-        background: #d9ad00;
-    }
-
-    #msg {
-        margin-top: 12px;
-        color: red;
-        font-weight: bold;
-        text-align: center;
-    }
-</style>
-
+  <meta charset="UTF-8">
+  <title>CoelhoLog – Logística e Transporte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="login-container">
-
-    <!-- LOGO -->
-    <div class="logo-box">
-        <img src="/img/logo.png" alt="CoelhoLog">
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Sua logo aqui -->
+        <img src="img/coelholog_horizontal.png" alt="CoelhoLog">
+      </div>
+      <nav class="nav" id="mainNav">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#contato">Contato</a>
+        <a href="#portal" class="btn-primary">Portal do Colaborador</a>
+      </nav>
+      <button class="burger" id="burgerBtn">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- CARD DO LOGIN -->
-    <div class="login-card">
-        <h2>Login</h2>
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Logística urbana e last-mile confiável para o seu e-commerce</h1>
+          <p>Entregas rápidas, controle completo de painel e serviço sob medida. Com a CoelhoLog sua operação entrega mais e melhor.</p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn-primary">Fale com um especialista</a>
+            <a href="#servicos" class="btn-outline">Nossas soluções</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- Pode colocar ilustração de caminhão / entregas -->
+          <img src="img/hero-truck.png" alt="Entrega CoelhoLog">
+        </div>
+      </div>
+    </section>
 
-        <label>E-mail</label>
-        <input id="email" class="input" type="email" placeholder="seuemail@email.com">
+    <section class="section" id="servicos">
+      <div class="container">
+        <h2>Nossos Serviços</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Last-mile urbano</h3>
+            <p>Entrega rápida e eficiente em áreas urbanas, com roteirização e rastreamento.</p>
+          </div>
+          <div class="card">
+            <h3>Logística indoor & field</h3>
+            <p>Armazenagem, conferência e logística integrada para empresas de varejo e e-commerce.</p>
+          </div>
+          <div class="card">
+            <h3>Operação sob medida</h3>
+            <p>Soluções customizadas de acordo com o volume, região e necessidade da sua operação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <label style="margin-top:15px;">Senha</label>
-        <input id="password" class="input" type="password" placeholder="Digite sua senha">
+    <section class="section alt" id="como-funciona">
+      <div class="container">
+        <h2>Como Funciona</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Diagnóstico da operação</h3>
+            <p>Avaliação de volume, regiões e SLA para definir a melhor rota logística.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Setup & integração</h3>
+            <p>Integração com seu sistema, preparação logística e treinamento de equipe.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Operação ativa & gestão</h3>
+            <p>Entrega com monitoramento, painel de gestão e suporte constante.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <button class="btn-login" onclick="login()">Entrar</button>
+    <section class="section" id="contato">
+      <div class="container">
+        <h2>Fale com a gente</h2>
+        <p>Quer saber como a CoelhoLog pode ajudar na sua operação? Entre em contato:</p>
+        <ul class="contact-list">
+          <li><strong>E-mail:</strong> contato@coelholog.com.br</li>
+          <li><strong>WhatsApp:</strong> (XX) XXXX-XXXX</li>
+          <li><strong>Áreas de atuação:</strong> São Paulo e região</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-        <p id="msg"></p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>CoelhoLog</strong><br>
+        Logística & Transporte • Last-mile urbano
+      </div>
+      <div>&copy; <span id="year"></span> CoelhoLog. Todos os direitos reservados.</div>
     </div>
+  </footer>
 
-</div>
+  <script>
+    // ano automático no footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<script>
-async function login(){
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-
-    if(!email || !password){
-        document.getElementById('msg').innerText = "Preencha todos os campos.";
-        return;
-    }
-
-    try {
-        const res = await fetch('/api/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
-
-        if(!res.ok){
-            document.getElementById('msg').innerText = "E-mail ou senha incorretos.";
-            return;
-        }
-
-        const user = await res.json();
-        localStorage.setItem("usuario", JSON.stringify(user));
-
-        if(user.role === "financeiro" || user.role === "admin"){
-            window.location.href = "/admin/dashboard_admin.html";
-        } else {
-            window.location.href = "/colaborador/dashboard.html";
-        }
-
-    } catch (err) {
-        document.getElementById('msg').innerText = "Erro ao conectar no servidor.";
-    }
-}
-</script>
+    // menu mobile
+    const burger = document.getElementById('burgerBtn');
+    const nav = document.getElementById('mainNav');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      burger.classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>
